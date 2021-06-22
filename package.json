@@ -1,0 +1,24 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Team Profile Generator",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dillon Smith",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillon-smith-us/team-profile-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dillon-smith-us/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/dillon-smith-us/team-profile-generator#readme"
+}
