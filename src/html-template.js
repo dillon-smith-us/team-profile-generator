@@ -4,8 +4,6 @@ const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 
-const formatName = require('../utils/helper');
-
 const addEmployee = employeeInfo => {
     let allCards = '';
     employeeInfo.forEach(employee => {

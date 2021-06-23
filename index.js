@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer')
-const generatePage = Require('./src/page-template.js')
+const generatePage = require('./src/html-template.js')
 const formatName = require('./utils/helper');
 const employees = [];
 const questions = [
@@ -67,7 +67,7 @@ const questions = [
             }
         },
         validate: officeNumberInput => {
-            if (!isNaN(parseInt(officeNumer))) {
+            if (!isNaN(parseInt(officeNumberInput))) {
                 return true;
             } else {
                 console.log('Please enter a valid office number!');
