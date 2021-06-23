@@ -2,14 +2,14 @@ const fs = require('fs');
 const inquirer = require('inquirer')
 const generatePage = require('./src/html-template.js')
 const formatName = require('./utils/helper');
-const employees = [];
+const employees1 = [];
 const questions = [
     {
         type: 'list',
         name: 'role',
         message: 'what is the employee\'s role?',
         choices: () => {
-            if (employees.some(employee => employee.role === 'Manager')) {
+            if (employees1.some(employee => employee.role === 'Manager')) {
                 return['Engineer', 'Intern']
             } else {
                 return['Manager', 'Engineer', 'Intern']
@@ -126,11 +126,11 @@ const questions = [
 const promptUser = () => {
     return inquirer.prompt(questions)
     .then(userResponse => {
-        employees.push(userResponse);
+        employees1.push(userResponse);
         if (userResponse.newEmployee) {
             return promptUser();
         } else {
-            return employees;
+            return employees1;
         };
     });
 };
