@@ -23,6 +23,10 @@
     ## TESTS
     
     npm install jest. Then run `npm run test`
+
+    ## SCREENSHOT
+
+    ![screen shot](./images/screenshot.png)
   
     ## LICENSE
   
