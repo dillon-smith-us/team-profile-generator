@@ -14,7 +14,7 @@
     
     ## INSTALLATION 
     
-    npm install inquirer
+    Run `npm install inquirer`
     
     ## USAGE
     
