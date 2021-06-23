@@ -27,7 +27,7 @@ const addEmployee = employeeInfo => {
                 default:
                     newEmployee = new Employee(formatName(firstName), formatName(lastName), id);
         };
-
+// creates cards for our index.html
         allCards += `
 <div class="column is-one-quarter-desktop">
     <div class="card">

@@ -8,7 +8,7 @@ test('creates a employee object', () => {
     expectToBe(employee.lastName, 'Doe');
     expectNum(employee.id);
     expectStr(employee.email, '@');
-    expectToBe(employee.role, 'Employee');
+    expectToBe(employee.position, 'Employee');
     expectToBe(employee.icon, 'fas fa-briefcase');
 });
 
@@ -24,8 +24,8 @@ test('gets employee\'s email', () => {
     expectStr(employee.getEmail(), employee.email);
 });
 
-test('gets employee\'s role', () => {
-    expectStr(employee.getRole(), employee.role);
+test('gets employee\'s position', () => {
+    expectStr(employee.getPosition(), employee.position);
 });
 
 test('gets employee\'s icon', () => {
