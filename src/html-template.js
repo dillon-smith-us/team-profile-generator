@@ -7,11 +7,11 @@ const Manager = require('../lib/Manager');
 const addEmployee = employeeInfo => {
     let allCards = '';
     employeeInfo.forEach(employee => {
-        const { firstName, lastName, id, role } = employee;
+        const { firstName, lastName, id, position } = employee;
         let newEmployee = '';
         let extraInfo = '';
 
-        switch (role) {
+        switch (position) {
             case 'Manager': 
                 newEmployee = new Manager(formatName(firstName), formatName(lastName), id, employee.officeNumber);
                 extraInfo = newEmployee.getOfficeNumber();
@@ -38,7 +38,7 @@ const addEmployee = employeeInfo => {
                 </div>
                 <div class="media-content">
                     <p class="title is-4">${newEmployee.getName()}</p>
-                    <p class="subtitle is-6">${newEmployee.getRole()}</p>
+                    <p class="subtitle is-6">${newEmployee.getPosition()}</p>
                 </div>
             </div>
 

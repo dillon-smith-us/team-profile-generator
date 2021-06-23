@@ -6,10 +6,10 @@ const employees1 = [];
 const questions = [
     {
         type: 'list',
-        name: 'role',
-        message: 'what is the employee\'s role?',
+        name: 'position',
+        message: 'what is the employee\'s position?',
         choices: () => {
-            if (employees1.some(employee => employee.role === 'Manager')) {
+            if (employees1.some(employee => employee.position === 'Manager')) {
                 return['Engineer', 'Intern']
             } else {
                 return['Manager', 'Engineer', 'Intern']
@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'firstName',
-        message: ({role}) => `What is the ${role.toLowerCase()}'s first name?`,
+        message: ({position}) => `What is the ${position.toLowerCase()}'s first name?`,
         validate: nameInput => {
             if (nameInput) {
                 return true;
@@ -59,8 +59,8 @@ const questions = [
         type: 'input',
         name: 'officeNumber',
         message: ({ firstName }) => `What is ${formatName(firstName)}'s office number?`,
-        when: ({ role }) => {
-            if (role === 'Manager') {
+        when: ({ position }) => {
+            if (position === 'Manager') {
                 return true;
             } else {
                 return false;
@@ -79,8 +79,8 @@ const questions = [
         type: 'input',
         name: 'github',
         message: ({ firstName }) => `What is ${formatName(firstName)}'s github? username?`,
-        when: ({ role }) => {
-            if (role === 'Engineer') {
+        when: ({ position }) => {
+            if (position === 'Engineer') {
                 return true;
             } else {
                 return false;
@@ -99,8 +99,8 @@ const questions = [
         type: 'input', 
         name: 'school',
         message: ({ firstName }) => `What is ${formatName(firstName)}'s school name?`,
-        when: ({ role }) => {
-            if (role === 'Intern') {
+        when: ({ position }) => {
+            if (position === 'Intern') {
                 return true;
             } else {
                 return false;

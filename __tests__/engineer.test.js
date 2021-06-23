@@ -8,7 +8,7 @@ test('creates an engineer object', () => {
     expectToBe(engineer.lastName, 'Doe');
     expectNum(engineer.id);
     expectStr(engineer.email, '@');
-    expectToBe(engineer.role, 'Engineer');
+    expectToBe(engineer.position, 'Engineer');
     expectToBe(engineer.icon, 'fas fa-glasses');
 });
 
@@ -24,8 +24,8 @@ test('gets engineer\'s email', () => {
     expectStr(engineer.getEmail(), engineer.email);
 });
 
-test('gets engineer\'s role', () => {
-    expectStr(engineer.getRole(), engineer.role);
+test('gets engineer\'s position', () => {
+    expectStr(engineer.getPosition(), engineer.position);
 });
 
 test('gets engineer\'s github', () => {
